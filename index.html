@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учёт расходов</title>
+    <!-- Фавикон -->
+    <link rel="icon" href="./favicon.png" type="image/png" />
+    <!-- Сброс стилей по умолчанию -->
+    <link rel="stylesheet" href="./reset.css" />
+    <!-- Шрифт "Inter" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Подключение файла с основными стилями -->
+    <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+    <main>
+        <section class="expenses-accounting">
+            <div class="container">
+                <h1 class="expenses__accounting__heading">
+                    Учёт расходов
+                </h1>
+                <div class="expense">
+        
+                    <div class="expense__inputs">
+                        <input type="number"
+                        class="js-expense__inputs__input-sum input
+                        expense__inputs__input-sum" placeholder="Введите сумму">
+                        <select class="js-expenses__categories expensies__categories">
+                            <!-- <option hidden="" disabled selected value="Выберите категорию">
+                                Выберите категорию
+                            </option> -->
+                            <option value="транспорт"
+                            class="js-expenses__categories__type expenses__categories__type"
+                            >
+                            Транспорт</option>
+                            <option selected value="кафе и рестораны" class="js-expenses__categories__type expenses__categories__type">
+                                Кафе и рестораны</option>
+                            <option value="аптека" class="js-expenses__categories__type expenses__categories__type">
+                                Аптека</option>
+                            <option value="развлечения" class="js-expenses__categories__type expenses__categories__type">
+                                Развлечения</option>
+                        </select>
+                    </div>
+                    <button class="js-expense__btn-add btn expense__btn-add">
+                        Добавить
+                    </button>
+                </div>
+                <div class="info">
+                    <div class="info__control">
+                        <div class="info__spent">
+                            <h2 class="info__spent__heading-limit">
+                                Лимит:
+                                <span class="js-info__spent__heading-limit__value
+                                info__spent__heading-limit__value">
+                                    10000
+                                </span>
+                                <span class="currency">руб.</span>
+                                <img src="./change_limit.svg" alt="Изменить лимит"
+                                class="js-popup-open
+                                info__spent__heading-limit__change">
+                            </h2>
+                            <h2 class="info__spent__heading-total">
+                                Всего:
+                                <span class="js-info__spent__heading-total__sum
+                                info__spent__heading-total__sum">
+                                    0
+                                </span>
+                                <span class="js-currency
+                                currency"></span>
+                            </h2>
+                        </div>
+                        <div class="info__status">
+                            <h2 class="info__status__heading">
+                                Статус:
+                                <span class="js-info__status__value
+                                info__status__value">
+                                    всё хорошо
+                                </span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="info__history-wrap">
+                        <h2 class="info__history__heading">
+                            История
+                        </h2>
+                        <div class="js-info__history info__history">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn js-expenses-accounting__btn-reset expenses-accounting__btn-reset">
+                    Сбросить расходы
+                </button>
+                <div class="js-popup popup">
+                    <div class="popup__window">
+                        <h2 class="popup__heading">
+                            Новый лимит
+                        </h2>
+                        <img src="./popup_close.svg" alt="Кнопка закрытия"
+                        class="js-popup-close popup__close">
+                        <input type="number" class="js-popup__input input popup__input">
+                        <button class="js-popup__btn btn popup__btn">
+                            Задать лимит
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
